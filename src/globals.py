@@ -10,10 +10,10 @@ if sly.is_development():
 
 api = sly.Api.from_env()
 
-TEAM_ID = int(os.environ["context.teamId"])
-WORKSPACE_ID = int(os.environ["context.workspaceId"])
-PROJECT_ID = int(os.environ["modal.state.slyProjectId"])
-DATASET_ID = int(os.environ["modal.state.slyDatasetId"])
+TEAM_ID = sly.env.team_id()
+WORKSPACE_ID = sly.env.workspace_id()
+PROJECT_ID = sly.env.project_id()
+DATASET_ID = sly.env.dataset_id(raise_not_found=True)
 
 KEEP_ANNS = bool(strtobool(os.getenv("modal.state.keepAnns")))
 PROJECT_NAME = os.environ["modal.state.projectName"]
