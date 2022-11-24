@@ -1,1 +1,1 @@
-# convert-project-labels-to-rotated-bboxes
+# convert-labels-to-rotated-bboxes

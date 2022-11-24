@@ -1,0 +1,22 @@
+{
+  "name": "Convert labels to rotated bboxes",
+  "version": "2.0.0",
+  "headless": true,
+  "description": "Convert all labels in the project or dataset to rotated bounding boxes",
+  "categories": ["transform", "images"],
+  "modal_template": "src/modal.html",
+  "modal_template_state": {
+    "keepAnns": true,
+    "projectName": "New volumes project"
+  },
+  "icon": "",
+  "poster": "",
+  "context_menu": {
+    "context_category": "Import",
+    "target": ["images_project", "images_dataset"]
+  },
+  "min_agent_version": "6.7.4",
+  "min_instance_version": "6.5.55",
+  "entrypoint": "python -m uvicorn src.main:app --host 0.0.0.0 --port 8000",
+  "port": 8000
+}
