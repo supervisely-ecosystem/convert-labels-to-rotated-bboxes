@@ -1,3 +1,5 @@
+from typing import List
+
 import cv2
 import numpy as np
 import supervisely as sly
@@ -53,6 +55,20 @@ def get_anns_list(api: sly.Api, ds_id: int, project_meta: sly.ProjectMeta):
     return anns
 
 
+def convert_anns(anns: List[sly.Annotation], dst_project_meta: sly.ProjectMeta):
+    ro_bbox_anns = []
+    for ann in anns:
+        ro_bbox_labels = []
+        for label in ann.labels:
+            ro_bbox_label = label_to_ro_bbox(label=label, project_meta=dst_project_meta)
+            ro_bbox_labels.append(ro_bbox_label)
+        if KEEP_ANNS:
+            ro_bbox_anns.append(ann.add_labels(labels=ro_bbox_labels))
+        else:
+            ro_bbox_anns.append(ann.clone(labels=ro_bbox_labels))
+    return ro_bbox_anns
+
+
 def label_to_ro_bbox(label: sly.Label, project_meta: sly.ProjectMeta):
     if label.geometry == sly.Rectangle:
         return label
@@ -70,7 +86,6 @@ def label_to_ro_bbox(label: sly.Label, project_meta: sly.ProjectMeta):
     for coord in poly_ext:
         coords = np.array([coord.col, coord.row])
         points.append(coords)
-
     points = np.array(points)
 
     rect = cv2.minAreaRect(points)
