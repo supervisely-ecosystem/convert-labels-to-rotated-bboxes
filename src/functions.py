@@ -67,6 +67,8 @@ def convert_anns(anns: List[sly.Annotation], dst_project_meta: sly.ProjectMeta):
     for ann in anns:
         ro_bbox_labels = []
         for label in ann.labels:
+            if type(label.geometry) not in SUPPORTED_GEOMETRY_TYPES:
+                continue
             ro_bbox_label = label_to_ro_bbox(label=label, project_meta=dst_project_meta)
             ro_bbox_labels.append(ro_bbox_label)
         if KEEP_ANNS:
@@ -77,13 +79,10 @@ def convert_anns(anns: List[sly.Annotation], dst_project_meta: sly.ProjectMeta):
 
 
 def label_to_ro_bbox(label: sly.Label, project_meta: sly.ProjectMeta):
-    if label.geometry == sly.Rectangle:
-        return label
-
     ro_bbox_obj_class_name = f"ro_bbox_{label.obj_class.name}"
     ro_bbox_obj_class = project_meta.get_obj_class(ro_bbox_obj_class_name)
 
-    if label.geometry != sly.Polygon:
+    if type(label.geometry) != sly.Polygon:
         new_geometry = label.geometry.convert(new_geometry=sly.Polygon)[0]
         label = sly.Label(geometry=new_geometry, obj_class=ro_bbox_obj_class)
 
