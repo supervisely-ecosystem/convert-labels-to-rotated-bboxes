@@ -1,0 +1,14 @@
+<div>
+    <div class="fflex align-start" style="flex-direction: column; margin: 0 0 20px 0" v-if="!context.slyProjectId">
+        <sly-field title="Result Project Name"
+            description="Enter project name manually (optional) or keep empty to generate it automatically. Original project will remain unchanged.">
+        </sly-field>
+        <el-input placeholder="Enter Project Name" v-model="state.projectName"></el-input>
+    </div>
+    <div class="fflex align-start">
+        <el-checkbox v-model="state.keepAnns" class="mt10 mr10"></el-checkbox>
+        <sly-field class="mt20" title="Keep original annotations"
+            description="Annotations from original project will be uploaded along with the rotated bounding boxes">
+        </sly-field>
+    </div>
+</div>
