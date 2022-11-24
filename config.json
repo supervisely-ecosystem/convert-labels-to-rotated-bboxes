@@ -11,7 +11,7 @@
   "modal_template": "src/modal.html",
   "modal_template_state": {
     "keepAnns": true,
-    "projectName": "New volumes project"
+    "projectName": ""
   },
   "icon": "",
   "poster": "",
