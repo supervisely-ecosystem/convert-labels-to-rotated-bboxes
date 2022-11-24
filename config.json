@@ -16,7 +16,7 @@
   "icon": "",
   "poster": "",
   "context_menu": {
-    "context_category": "Import",
+    "context_category": "Transform",
     "target": [
       "images_project",
       "images_dataset"
