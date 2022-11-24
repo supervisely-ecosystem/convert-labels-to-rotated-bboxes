@@ -1,11 +1,6 @@
 import supervisely as sly
 
-from src.functions import (
-    convert_anns,
-    copy_ds_images,
-    create_project,
-    get_anns_list,
-)
+from src.functions import convert_anns, copy_ds_images, create_project, get_anns_list
 from src.globals import DATASET_ID, PROJECT_ID, api, app
 
 dst_project, dst_project_meta, src_project_meta = create_project(api=api)

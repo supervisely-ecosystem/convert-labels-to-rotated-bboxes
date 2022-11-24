@@ -8,8 +8,8 @@ from src.globals import (
     KEEP_ANNS,
     PROJECT_ID,
     PROJECT_NAME,
-    WORKSPACE_ID,
     SUPPORTED_GEOMETRY_TYPES,
+    WORKSPACE_ID,
 )
 
 

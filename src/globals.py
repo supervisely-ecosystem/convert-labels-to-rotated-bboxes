@@ -4,15 +4,14 @@ from distutils.util import strtobool
 from pathlib import Path
 
 import supervisely as sly
+from dotenv import load_dotenv
 
 root_source_path = str(Path(sys.argv[0]).parents[2])
 sly.logger.info(f"Root source directory: {root_source_path}")
 sys.path.append(root_source_path)
 
-# only for debug
-# from dotenv import load_dotenv
-# load_dotenv(os.path.expanduser("~/supervisely.env"))
-# load_dotenv("local.env")
+load_dotenv(os.path.expanduser("~/supervisely.env"))
+load_dotenv("local.env")
 
 api = sly.Api.from_env()
 
