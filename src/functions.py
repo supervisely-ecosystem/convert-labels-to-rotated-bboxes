@@ -33,7 +33,7 @@ def create_project(api: sly.Api):
 
     dst_project = api.project.create(
         workspace_id=WORKSPACE_ID,
-        name=PROJECT_NAME or None,
+        name=PROJECT_NAME or api.project.get_info_by_id(id=PROJECT_ID).name,
         type=sly.ProjectType.IMAGES,
         change_name_if_conflict=True,
     )
