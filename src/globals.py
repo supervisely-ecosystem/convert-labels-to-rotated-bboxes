@@ -10,8 +10,9 @@ root_source_path = str(Path(sys.argv[0]).parents[2])
 sly.logger.info(f"Root source directory: {root_source_path}")
 sys.path.append(root_source_path)
 
-load_dotenv(os.path.expanduser("~/supervisely.env"))
+# for convenient debug, has no effect in production
 load_dotenv("local.env")
+load_dotenv(os.path.expanduser("~/supervisely.env"))
 
 api = sly.Api.from_env()
 
