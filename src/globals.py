@@ -4,9 +4,9 @@ from distutils.util import strtobool
 import supervisely as sly
 from dotenv import load_dotenv
 
-# for convenient debug, has no effect in production
-load_dotenv("local.env")
-load_dotenv(os.path.expanduser("~/supervisely.env"))
+if sly.is_development():
+    load_dotenv("local.env")
+    load_dotenv(os.path.expanduser("~/supervisely.env"))
 
 api = sly.Api.from_env()
 
