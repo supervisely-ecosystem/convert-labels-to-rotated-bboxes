@@ -4,7 +4,13 @@ import cv2
 import numpy as np
 import supervisely as sly
 
-from src.globals import KEEP_ANNS, PROJECT_ID, PROJECT_NAME, WORKSPACE_ID
+from src.globals import (
+    KEEP_ANNS,
+    PROJECT_ID,
+    PROJECT_NAME,
+    WORKSPACE_ID,
+    SUPPORTED_GEOMETRY_TYPES,
+)
 
 
 def create_project(api: sly.Api):
@@ -18,6 +24,7 @@ def create_project(api: sly.Api):
             color=obj_class.color,
         )
         for obj_class in src_project_meta.obj_classes
+        if obj_class.geometry_type in SUPPORTED_GEOMETRY_TYPES
     ]
 
     dst_project_meta = sly.ProjectMeta(obj_classes=ro_bbox_obj_classes)

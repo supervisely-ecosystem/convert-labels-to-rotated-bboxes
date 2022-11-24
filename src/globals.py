@@ -25,4 +25,12 @@ DATASET_ID = sly.env.dataset_id()
 KEEP_ANNS = bool(strtobool(os.getenv("modal.state.keepAnns")))
 PROJECT_NAME = os.environ["modal.state.projectName"]
 
+SUPPORTED_GEOMETRY_TYPES = [
+    sly.AnyGeometry,
+    sly.Bitmap,
+    sly.Polygon,
+    sly.Polyline,
+    sly.Rectangle,
+]
+
 app = sly.Application()
