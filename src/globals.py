@@ -13,7 +13,7 @@ api = sly.Api.from_env()
 TEAM_ID = sly.env.team_id()
 WORKSPACE_ID = sly.env.workspace_id()
 PROJECT_ID = sly.env.project_id()
-DATASET_ID = sly.env.dataset_id(raise_not_found=True)
+DATASET_ID = sly.env.dataset_id(raise_not_found=False)
 
 KEEP_ANNS = bool(strtobool(os.getenv("modal.state.keepAnns")))
 PROJECT_NAME = os.environ["modal.state.projectName"]
