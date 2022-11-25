@@ -19,7 +19,7 @@ def create_project(api: sly.Api):
     )
     ro_bbox_obj_classes = [
         sly.ObjClass(
-            name=f"ro_bbox_{obj_class.name}",
+            name=f"{obj_class.name}_ro_bbox",
             geometry_type=sly.Polygon,
             color=obj_class.color,
         )
@@ -79,7 +79,7 @@ def convert_anns(anns: List[sly.Annotation], dst_project_meta: sly.ProjectMeta):
 
 
 def label_to_ro_bbox(label: sly.Label, project_meta: sly.ProjectMeta):
-    ro_bbox_obj_class_name = f"ro_bbox_{label.obj_class.name}"
+    ro_bbox_obj_class_name = f"{label.obj_class.name}_ro_bbox"
     ro_bbox_obj_class = project_meta.get_obj_class(ro_bbox_obj_class_name)
 
     if type(label.geometry) != sly.Polygon:
