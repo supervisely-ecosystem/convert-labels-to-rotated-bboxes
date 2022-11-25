@@ -42,7 +42,7 @@ App can be launched from ecosystem, images project or images dataset
 
 ## Run from Images Project or Dataset
 
-**Step 1.** Run the application from the context menu of the Images Project
+**Step 1.** Run the application from the context menu of the Images Project or Dataset
 
 <img src="" width="80%" style='padding-top: 10px'>  
 
