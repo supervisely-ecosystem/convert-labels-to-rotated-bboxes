@@ -13,7 +13,9 @@
 
 # Overview
 
-Convert labels in the project or dataset to rotated bounding boxes. Supported shapes: `Polygon`, `Bitmap`, `Line`, `Rectangle` or `Any Shape` with any of the mentioned shapes. Resulting label names will be added suffix `ro_bbox`, e.g `plane` -> `ro_bbox_plane`. If you want to keep labels from original project or dataset leave checkbox `Keep original annotations` in the modal window enabled. Application always converts data to the new project, original project will remain unchanged.
+Convert labels in the project or dataset to rotated bounding boxes (`Polygon` with properties of rotated bbox). Supported shapes: `Polygon`, `Bitmap`, `Line`, `Rectangle` or `Any Shape` with any of the mentioned shapes. Resulting label names will be added suffix `ro_bbox`, e.g `plane` -> `plane_ro_bbox`. Disable `Keep original annotations` checkbox if you don't want to copy original labels. Application always converts data to the new project, original project will remain unchanged.
+
+You can use this app along with [`Export to DOTA`]() app.
 
 <table>
   <tr>
