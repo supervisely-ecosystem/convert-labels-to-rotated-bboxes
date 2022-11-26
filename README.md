@@ -24,7 +24,7 @@ You can use this app along with [`Export to DOTA`](https://ecosystem.supervise.l
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/115161827/204102964-bb07db56-f60a-4f62-b487-72e90ea72d55.png"/></td>
-    <td><img src="https://user-images.githubusercontent.com/115161827/204102967-c990772e-59d2-453f-8b7e-8640a86da16b.png"/></td>
+    <td><img src="https://user-images.githubusercontent.com/115161827/204103375-d6aa6cc7-d5e9-422b-aaea-a356cc333604.png"/></td>
   </tr>
 </table>
 
@@ -32,7 +32,7 @@ You can use this app along with [`Export to DOTA`](https://ecosystem.supervise.l
 
 App can be launched from ecosystem, images project or images dataset
 
-## Run from Ecosystem
+## Option 1. Run from Ecosystem
 
 **Step 1.** Run the app from Ecosystem
 
@@ -42,7 +42,7 @@ App can be launched from ecosystem, images project or images dataset
 
 <img src="https://user-images.githubusercontent.com/115161827/204102955-7854af24-a847-4d7a-a633-4f1639ab370f.gif" width="80%" style='padding-top: 10px'>
 
-## Run from Images Project or Dataset
+## Option 2. Run from Images Project or Dataset
 
 **Step 1.** Run the application from the context menu of the Images Project or Dataset
 
