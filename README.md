@@ -1,6 +1,6 @@
 
 <div align="center" markdown>
-<img src="[https://user-images.githubusercontent.com/12828725/182181033-d0d1a690-8388-472e-8862-e0cacbd4f082.png](https://user-images.githubusercontent.com/115161827/204101369-d3ca96fe-d252-4c9f-8dbe-01d86ab377d3.png)"/>  
+<img src="https://user-images.githubusercontent.com/115161827/204101369-d3ca96fe-d252-4c9f-8dbe-01d86ab377d3.png"/>  
 
 # Convert Labels to Rotated Bboxes
 
