@@ -100,5 +100,5 @@ def label_to_ro_bbox(label: sly.Label, project_meta: sly.ProjectMeta):
 
     coords = [[coord[1], coord[0]] for coord in rot_box]
     ro_bbox_poly = sly.Polygon(exterior=coords)
-    ro_bbox_label = label.clone(geometry=ro_bbox_poly, obj_class=ro_bbox_obj_class)
+    ro_bbox_label = label.clone(geometry=ro_bbox_poly, obj_class=ro_bbox_obj_class, tags=label.tags)
     return ro_bbox_label
