@@ -54,4 +54,4 @@ App can be launched from ecosystem, images project or images dataset
 
 ## Result
 
-<img src="https://user-images.githubusercontent.com/115161827/204102959-dde795cc-743a-4062-b2de-bb43b2037a69.jpg" width="80%" style='padding-top: 10px'>
+<img src="https://user-images.githubusercontent.com/115161827/204251652-e36e941a-9023-4009-b813-61243c98a164.png" width="80%" style='padding-top: 10px'>
