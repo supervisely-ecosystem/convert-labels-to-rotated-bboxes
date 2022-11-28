@@ -27,7 +27,7 @@ def create_project(api: sly.Api):
         if obj_class.geometry_type in SUPPORTED_GEOMETRY_TYPES
     ]
 
-    dst_project_meta = sly.ProjectMeta(obj_classes=ro_bbox_obj_classes)
+    dst_project_meta = sly.ProjectMeta(obj_classes=ro_bbox_obj_classes, tag_metas=src_project_meta.tag_metas)
     if KEEP_ANNS is True:
         dst_project_meta = dst_project_meta.merge(other=src_project_meta)
 
