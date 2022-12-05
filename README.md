@@ -25,8 +25,8 @@ You can use this app along with [`Export to DOTA`](https://ecosystem.supervise.l
 
 <table>
   <tr>
-    <th>Original (Image of Labeling tool before convertion)</th>
-    <th>Converted (Image of Labeling tool after convertion)</th>
+    <th>Original</th>
+    <th>Converted</th>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/115161827/204102964-bb07db56-f60a-4f62-b487-72e90ea72d55.png"/></td>
