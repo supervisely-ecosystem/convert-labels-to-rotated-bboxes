@@ -3,7 +3,7 @@
     "version": "2.0.0",
     "headless": true,
     "description": "Convert all labels in the project or dataset to rotated bounding boxes",
-    "docker_image": "supervisely/data-operations:0.0.3",
+    "docker_image": "supervisely/data-operations:0.0.5",
     "categories": [
         "images",
         "annotation transformation",
