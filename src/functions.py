@@ -53,7 +53,7 @@ def copy_ds_images(api: sly.Api, src_ds_id: int, dst_ds_id: int):
 
 
 def get_anns_list(api: sly.Api, ds_id: int, project_meta: sly.ProjectMeta):
-    ann_infos = api.annotation.get_list(dataset_id=ds_id)
+    ann_infos = api.annotation.download_batch(dataset_id=ds_id)
     ann_jsons = [ann_info.annotation for ann_info in ann_infos]
     anns = [
         sly.Annotation.from_json(data=ann_json, project_meta=project_meta)
