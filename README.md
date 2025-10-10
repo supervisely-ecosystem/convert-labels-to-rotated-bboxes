@@ -9,7 +9,7 @@
   <a href="#How-to-use">How To Use</a>
 </p>
 
-[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](https://ecosystem.supervisely.com/apps/convert-labels-to-rotated-bboxes)
+[![](https://img.shields.io/badge/supervisely-ecosystem-brightgreen)](../../../../supervisely-ecosystem/convert-labels-to-rotated-bboxes)
 [![](https://img.shields.io/badge/slack-chat-green.svg?logo=slack)](https://supervisely.com/slack)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/supervisely-ecosystem/convert-labels-to-rotated-bboxes)
 [![views](https://app.supervisely.com/img/badges/views/supervisely-ecosystem/convert-labels-to-rotated-bboxes.png)](https://supervisely.com)
@@ -21,7 +21,7 @@
 
 Convert labels in the project or dataset to rotated bounding boxes (`Polygon` with properties of rotated bbox). Supported shapes: `Polygon`, `Bitmap`, `Line`, `Rectangle` or `Any Shape` with any of the mentioned shapes. Resulting label names will be added suffix `ro_bbox`, e.g `plane` -> `plane_ro_bbox`. Disable `Keep original annotations` checkbox if you don't want to copy original labels. Application always converts data to the new project, original project will remain unchanged.
 
-You can use this app along with [`Export to DOTA`](https://ecosystem.supervisely.com/apps/export-to-dota) app.
+You can use this app along with [`Export to DOTA`](../../../../supervisely-ecosystem/export-to-dota) app.
 
 <table>
   <tr>
