@@ -19,7 +19,11 @@
 
 # Overview
 
-Convert labels in the project or dataset to rotated bounding boxes (`Polygon` with properties of rotated bbox). Supported shapes: `Polygon`, `Bitmap`, `Line`, `Rectangle` or `Any Shape` with any of the mentioned shapes. Resulting label names will be added suffix `ro_bbox`, e.g `plane` -> `plane_ro_bbox`. Disable `Keep original annotations` checkbox if you don't want to copy original labels. Application always converts data to the new project, original project will remain unchanged.
+Convert labels in the project or dataset to rotated/oriented bounding boxes (`Polygon` with properties of rotated bbox or `OrientedBBox`). Supported shapes: `Polygon`, `Bitmap`, `Line`, `Rectangle` or `Any Shape` with any of the mentioned shapes. Resulting label names will be added suffix `ro_bbox`/`obbox`, e.g `plane` -> `plane_ro_bbox`/`. Disable `Keep original annotations` checkbox if you don't want to copy original labels. Application always converts data to the new project, original project will remain unchanged.
+
+# Change log
+
+- v1.1.0: Added support for `OrientedBBox` as output geometry type and option in modal to choose between `Polygon` and `OrientedBBox`.
 
 You can use this app along with [`Export to DOTA`](https://ecosystem.supervisely.com/apps/export-to-dota) app.
 

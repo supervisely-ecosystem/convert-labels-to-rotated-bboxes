@@ -1,7 +1,7 @@
 import supervisely as sly
 
 from src.functions import convert_anns, copy_ds_images, create_project, get_anns_list
-from src.globals import DATASET_ID, PROJECT_ID, api, app
+from src.globals import DATASET_ID, PROJECT_ID, api
 
 dst_project, dst_project_meta, src_project_meta = create_project(api=api)
 if DATASET_ID is not None:
@@ -22,5 +22,3 @@ for dataset in datasets:
     ):
         api.annotation.upload_anns(img_ids=batch_images_ids, anns=batch_ro_bbox_anns)
     progress.iter_done_report()
-
-app.shutdown()
