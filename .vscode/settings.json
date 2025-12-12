@@ -1,12 +1,19 @@
 {
-    "python.defaultInterpreterPath": ".venv/bin/python",
-    "files.exclude": {
-        "**/__pycache__": true,
-        ".venv": true
-    },
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "files.exclude": {
+    "**/__pycache__": true,
+    ".venv": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "python.formatting.provider": "black",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
-    "python.formatting.provider": "black",
-    "debug.inlineValues": "off",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "debug.inlineValues": "off"
 }

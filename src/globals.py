@@ -18,6 +18,12 @@ DATASET_ID = sly.env.dataset_id(raise_not_found=False)
 KEEP_ANNS = bool(strtobool(os.getenv("modal.state.keepAnns")))
 PROJECT_NAME = os.environ["modal.state.projectName"]
 
+
+DST_GEOMETRY = os.getenv("modal.state.annType", "polygon")
+geometries_map = {"polygon": sly.Polygon, "obbox": sly.OrientedBBox}
+DST_GEOMETRY = geometries_map.get(DST_GEOMETRY, sly.Polygon)
+
+
 SUPPORTED_GEOMETRY_TYPES = [
     sly.AnyGeometry,
     sly.Bitmap,
@@ -25,5 +31,3 @@ SUPPORTED_GEOMETRY_TYPES = [
     sly.Polyline,
     sly.Rectangle,
 ]
-
-app = sly.Application()
