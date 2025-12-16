@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "headless": true,
   "description": "Convert all labels in the project or dataset to rotated bounding boxes",
-  "docker_image": "supervisely/base-py-sdk-light:6.73.485",
+  "docker_image": "supervisely/base-py-sdk-light:6.73.487",
   "categories": ["images", "annotation transformation", "data operations"],
   "modal_template": "src/modal.html",
   "modal_template_state": {
