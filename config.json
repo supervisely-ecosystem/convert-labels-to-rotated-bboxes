@@ -3,28 +3,22 @@
   "version": "2.0.0",
   "headless": true,
   "description": "Convert all labels in the project or dataset to rotated bounding boxes",
-  "docker_image": "supervisely/data-operations:6.73.483",
-  "categories": [
-    "images",
-    "annotation transformation",
-    "data operations"
-  ],
+  "docker_image": "supervisely/base-py-sdk-light:6.73.487",
+  "categories": ["images", "annotation transformation", "data operations"],
   "modal_template": "src/modal.html",
   "modal_template_state": {
     "keepAnns": true,
-    "projectName": ""
+    "projectName": "",
+    "annType": "polygon"
   },
   "icon": "https://user-images.githubusercontent.com/115161827/204101364-6507fa9c-b40b-47a6-991d-d4d250cf3c6d.jpg",
   "poster": "https://user-images.githubusercontent.com/115161827/204101369-d3ca96fe-d252-4c9f-8dbe-01d86ab377d3.png",
   "context_menu": {
     "context_category": "Transform",
-    "target": [
-      "images_project",
-      "images_dataset"
-    ]
+    "target": ["images_project", "images_dataset"]
   },
   "min_agent_version": "6.7.4",
   "min_instance_version": "6.15.35",
-  "entrypoint": "python -m uvicorn src.main:app --host 0.0.0.0 --port 8000",
+  "main_script": "src/main.py",
   "port": 8000
 }

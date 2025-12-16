@@ -11,4 +11,11 @@
             description="Annotations from original project will be uploaded along with the rotated bounding boxes">
         </sly-field>
     </div>
+    <div class="fflex align-start" style="flex-direction: column; margin-top: 20px;">
+        <sly-field class="mt20" title="Output Geometry Type"
+            description="Select the geometry type for the converted annotations">
+        </sly-field>
+        <el-radio class="radio" style="margin-left: 0" v-model="state.annType" label="polygon">Supervisely Polygon</el-radio>
+        <el-radio class="radio" style="margin-left: 0; margin-top: 10px" v-model="state.annType" label="obbox">Supervisely OrientedBBox</el-radio>
+    </div>
 </div>
